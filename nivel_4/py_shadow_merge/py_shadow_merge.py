@@ -46,6 +46,8 @@ def shadow_merge(list1: list[int], list2: list[int]) -> list[int]:
 	mixer = list1 + list2
 	mixer.sort()
 	return mixer
+	
+	#return sorted(list1 + list2)
 
 def main() -> None:
 	print(shadow_merge([1, 3, 5, -1], [0, 8, 2, 1]))
