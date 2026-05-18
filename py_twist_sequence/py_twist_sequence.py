@@ -1,0 +1,57 @@
+"""
+Given a list 'nums' and integer 'n', rotate the list to the right by 'n' steps and return the resulting list
+
+The function must:
+	-> Shift elements to the right 'n' times
+	-> Wrap a around elements that go beyound the list length
+	-> Handle regative values of 'n' (rotate left)
+	-> Return a new rotated list
+
+Test:
+
+-> Basic cases
+print(twister([1, 2, 3, 4, 5], 2))
+[4, 5, 1, 2, 3]
+
+print(twister([4, 2, 1, -1, 'a'], 4))
+[2, 1, -1, 'a', 4]
+
+-> Rotation equal to length
+print(twister([1, 2, 3], 3))
+[1, 2, 3]
+
+-> Rotation greater than length
+print(twister([1, 2, 3], 5))
+[2, 3, 1]
+
+-> Negative rotation (left rotation)
+print(twister([1, 2, 3, 4], -1))
+[2, 3, 4, 1]
+
+-> Edge cases
+print(twister([], 3))
+[]
+
+print(twister([1], 10))
+[1]
+"""
+
+from collections import deque
+
+def twister(nums: list[int], n: int) -> list[int]:
+	result = []
+	dq = deque(nums)
+	dq.rotate(n)
+	return list(dq)
+
+def main() -> None:
+	print(twister([1, 2, 3, 4, 5], 2))
+	print(twister([4, 2, 1, -1, 'a'], 4))
+	print(twister([1, 2, 3], 3))
+	print(twister([1, 2, 3], 5))
+	print(twister([1, 2, 3, 4], -1))
+	print(twister([], 3))
+	print(twister([1], 10))
+
+if __name__ == "__main__":
+	main()
