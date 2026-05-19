@@ -71,3 +71,18 @@ def main() -> None:
 
 if __name__ == "__main__":
 	main()
+
+
+def base_convert(number: str, src_base: int, dest_base: int):
+	digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	try:
+		num = int(number, src_base)
+		if num == 0: 
+			return "0"
+		result = ""
+		while num > 0: 
+			result = digits[num % dest_base] + result
+			num //= dest_base
+	except Exception:
+		return "ERROR"
+	return result 

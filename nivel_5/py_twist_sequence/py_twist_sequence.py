@@ -55,3 +55,31 @@ def main() -> None:
 
 if __name__ == "__main__":
 	main()
+
+def twister(nums: list[int], n: int) -> list[int]:
+	if n < 0:
+		count = -n
+	else:
+		count = len(nums) - n
+	list1 = nums[count:]	
+	list2 = nums[:count]
+	return list1 + list2
+
+def twister(nums: list[int], n: int) -> list[int]:
+	if n < 0: 
+		count = -n
+	else:
+		count = len(nums) - n
+	list1 = nums[count:]
+	list2 = nums[:count]
+	return list1 + list2
+
+def twister(nums: list[int], n: int) -> list[int]:
+	if n < 0: 
+		count = -n 
+	else:
+		count = len(nums) - n 
+	list1 = nums[count:]
+	list2 = nums[:count]
+	return list1 + list2
+
