@@ -1,50 +1,52 @@
 #bracket
-def bracket_validator(s: str) -> bool:
+def ():
 	stack = []
 	peers = {')': '(', ']': '[', '}': '{'}
 	for char in s:
 		if char in "([{":
 			stack.append(char)
-		elif char in ")]}":
-			if not stack or stack.pop() != peers[char]:
+		if char in ")]}":
+			if not stack or stack.pop():
 				return False
-	return len(stack) == 0
+	return len(stack) == 0	
 
 #cryptic
-def sort_string(str_list: list[str]) -> list[str]:
-	vogal = "aAeEiIoOuU"
+def ():
+	vogais = "aAeEiIoOuU"
 	def key_func(s):
 		length = len(s)
-		vogal_count = sum( 1 for c in s if c in vogal)
-		return (vogal_count, length, s.lower())
-	return sorted(str_list, key=key_func)
+		vogal_count = sum(1 for c in s if c in vogal)
+		return (lenght, s.lower(), vogal_count)
+	return (str_list, key=key_func)
 
 #palindrome
-def is_palindrome(s: str) -> bool:
+def ():
+	if s == "":
+		return False
 	clean = ''.join(c.lower() for c in s if c.isalnum())
 	return clean == clean[::-1]
 
 #convert base
-def convert_base(number: str, src_base: int, dest_base: int):
-	digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+def ():
+	digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"	
 	try:
 		num = int(number, src_base)
 		if num == 0:
 			return "0"
 		result = ""
 		while num > 0:
-			result = digits[num % dest_base] + result
+			result = digits[num % dest_base] + result 
 			num //= dest_base
 	except Exception:
 		return "ERROR"
 	return result
 
 #mirror reverse
-def mirror_matrix(s: list[list[int]]) -> list[list[int]]
+def ():
 	return [e[::-1] for e in s]
 
 #shadow merge
-def shadow_merge(list1: list[int], list2: list[int]) -> list[int]:
+def ():
 	list1 = list1 or []
 	list2 = list2 or []
 	mixed = list1 + list2
@@ -52,16 +54,66 @@ def shadow_merge(list1: list[int], list2: list[int]) -> list[int]:
 	return mixed
 
 #patter tracker
-def patter(s: str) -> int:
-	count = 0 
-	if s[i].isdigit() and s[i + 1].isdigit() and s[i + 1] > s[i]:
-		count += 1
+def ():
+	for i in range(len(s) - 1):
+		if s[i].isdigit() and s[i + 1].isdigit() and s[i + 1] > s[i] and int(s[i+1]) == int(s[i] + 1):
+			count += 1
 	return count
+
 #twister
-def twister(nums: list[int], n: int) -> list[int]:
+def ():
 	if n < 0:
-		count = -n 
+		count = -n
 	else:
-		count = len(nums) - n
-	list1 = [count:]
-	list2 = [:count]
+		count = len(arr) - n
+	list1 = arr[count:]
+	list2 = arr[:count]
+	return list1 + list2
+
+#wis 
+def ():
+	result = ""
+	for i in s:
+		if 'a' <= i <= 'z':
+			result += chr((ord(i) - ord('a') + n) % 26 + ord('a'))
+		elif 'A' <= i <= 'Z':
+			result += chr((ord(i) - ord('A') + n) % 26 + ord('A'))
+		else:
+			result += 1
+	return result
+
+#anagram
+def ():
+	if len(s1) != len(s2):
+		return False
+	return sorted(s1) == sorted(s2)
+
+#sculpter
+def ():
+	count = 0
+	p = True
+	result = ""
+	while count < len(text):
+		if text[count].isalpha():
+			if p:
+				result += text[count].lower()
+			else:
+				result += text[count].upper()
+			p = not p
+		else:
+			result += text[count]
+		count += 1
+	return result 
+
+#hiden
+def():
+	it = iter(big)
+	return all(c in it for c in small)
+
+#inter
+def ():
+	result = ""
+	for char in s1:
+		if char in s2 and char not in result:
+			result += char
+	return result
