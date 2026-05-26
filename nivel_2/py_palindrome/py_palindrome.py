@@ -29,8 +29,7 @@ is_palindrome("Able was I ere I saw Elba") #True
 """
 
 def is_palindrome(s: str) -> bool:
-	# clean = ''.join(c.lower() for c in s if c.isalnum())
-	clean = clean.lower().replace(" ", "")
+	clean = ''.join(c.lower() for c in s if c.isalnum())
 	return clean == clean[::-1]
 
 def main() -> None:
@@ -53,7 +52,5 @@ if __name__ == "__main__":
 	main()
 
 
-def  is_palindrome(s: str) -> bool:
-	clean = ''.join(c.lower() for c in s if c.isalnum())
-	return clean == clean[::-1]
+
 

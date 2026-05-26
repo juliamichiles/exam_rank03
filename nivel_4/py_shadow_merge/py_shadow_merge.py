@@ -63,11 +63,4 @@ if __name__ == "__main__":
 	main()
 
 
-def shadow_merge(list1: list[int], list2: list[int]) -> list[int]:
-	list1 = list1 or []
-	list2 = list2 or []
-	
-	mixer = list1 + list2
-	mixer.sort()
-	return mixer
 

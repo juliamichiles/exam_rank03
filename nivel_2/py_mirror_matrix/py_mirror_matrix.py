@@ -50,6 +50,4 @@ def main() -> None:
 if __name__ == "__main__":
 	main()
 
-def reverse_matrix(s: list[list[int]]) -> list[list[int]]:
-	return [e[::-1] for e in s]
 

@@ -56,11 +56,3 @@ if __name__ == "__main__":
 	main()
 
 
-def sort_string(str_list: list[str]) -> list[str]:
-	vogal = "aAeEiIoOuU"
-	def key_func(s):
-		length = len(s)
-		vogal_count = sum(1 for c in s if c in vogal)
-		return (vogal_count, length, s.lower())
-	return sorted(str_list, key=key_func)
-

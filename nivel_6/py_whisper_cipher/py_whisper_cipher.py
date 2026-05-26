@@ -68,13 +68,4 @@ def main() -> None:
 if __name__ == "__main__":
 	main()
 
-def shift_alpha(s: str, n: int) -> str:
-	result = ""
-	for i in s:
-		if 'a' <= i <= 'z':
-			result += chr((ord(i) + ord('a') % 26) + ord('a'))
-		elif 'A' <= i <= 'Z':
-			result += chr((ord(i) + ord('A') % 26) + ord('A'))
-		else:
-			result += 1
-	return result 
+
