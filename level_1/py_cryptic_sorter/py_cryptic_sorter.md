@@ -1,0 +1,33 @@
+The function must:
+	-> Sort strings by the number of vowels (ascending)
+	-> If equal, sort by string length (ascending)
+	-> If still equal, sort lexicographically (alphabetically)
+	-> Vowels are: a, e, i, o, u (case-insensitive)
+
+Test:
+
+- Basic cases
+print(sort_string(["apple", "bat", "car", "ae", "b"])) 
+['b', 'ae', 'bat', 'car', 'apple']
+
+- Same vowel count, different lengths
+print(sort_string(["dog", "cat", "hi", "a"]))
+['a', 'hi', 'cat', 'dog']
+
+- Same vowel count and length -> lexicographical order
+print(sort_string(["bat", "cat", "ant"]))
+['ant', 'bat', 'cat']
+
+- Mixed uppercase and lowercase
+print(sort_string(["Apple", "banana", "Kiwi", "grape"]))
+sorted by vowel count (case-insensitive)
+
+- Edge cases
+print(sort_string([]))
+[]
+
+print(sort_string(["a", "e", "i", "o", "u"]))
+['a', 'e', 'i', 'o', 'u']
+
+print(sort_string(["bbb", "ccc", "ddd"]))
+['bbb', 'ccc', 'ddd'] (no vowels, same length -> lex order)

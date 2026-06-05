@@ -1,0 +1,12 @@
+"""
+Check if two strings are anagrams
+
+Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+Two strings are anagrams if they contain the same characters with the same frequency.
+
+Test:
+ - print(Anagram("racecar","carrace")) --> True
+ - print(Anagram("racecar","carace")) --> False
+ - print(Anagram("Conversation","Voices rant on")) --> False
+"""
+
