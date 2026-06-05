@@ -1,0 +1,74 @@
+"""
+Assignment name  : py_number_base_converter
+Expected files   : py_number_base_converter.py
+Allowed functions: None
+--------------------------------------------------------------------------------
+
+Write a function that converts a number from one base to another.
+Support bases from 2 to 36 inclusive, using digits 0-9 and letters A-Z for values 10-35. Return "ERROR" for invalid inputs (base, digits)
+
+Your function must be declared as follows:
+
+def number_base_converter(number: str, from_base: int, to_base: int) -> str:
+
+Examples:
+
+Input: number_base_converter("1010", 2, 10)
+Output: "10"
+
+Input: number_base_converter("FF", 16, 10)
+Output: "255"
+
+Input: number_base_converter("255", 10, 16)
+Output: "FF"
+
+Input: number_base_converter("123", 10, 2)
+Output: "1111011"
+
+Input: number_base_converter("Z", 36, 10)
+Output: "35"
+
+Input: number_base_converter("35", 10, 36)
+Output: "Z"
+
+Input: number_base_converter("123", 1, 10)
+Output: "ERROR"
+
+Input: number_base_converter("G", 16, 10)
+Output: "ERROR"
+
+"""
+
+"""
+Test:
+
+- Basic convertions
+convert_base("1010", 2, 10) # "10"
+convert_base("10", 10, 2) # "1010"
+convert_base("1A", 16, 10) # "26"
+convert_base("26", 10, 16) # "1A"
+
+- Same base
+convert_base("123", 10, 10) # "123"
+
+- Edge cases
+convert_base("0", 10, 2) # "0"
+convert_base("000", 2, 10) # "0"
+
+- Larger bases
+convert_base("ZZZ", 36, 10) # "46655"
+convert_base("46655", 10, 36) # "ZZZ"
+
+- Uppercase handling
+convert_base("A", 16, 10) # "10"
+convert_base("F", 16, 10) # "15"
+
+- Mixed digits and letters
+convert_base("1F4", 16, 10) # "500"
+convert_base("500", 10, 16) # "1F4"
+
+- Invalid cases
+convert_base("2", 2, 10) # Error / invalid input
+convert_base("G", 16, 10) # Error / invalid input
+"""
+

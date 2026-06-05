@@ -4,6 +4,8 @@ The function must:
 	-> If still equal, sort lexicographically (alphabetically)
 	-> Vowels are: a, e, i, o, u (case-insensitive)
 
+Function must be named: py_cryptic_sorter (for testing purposes)
+
 Test:
 
 - Basic cases

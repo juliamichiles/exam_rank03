@@ -42,7 +42,7 @@ def main() -> None:
 
 	print(is_palindrome("hello"))
 	print(is_palindrome("python"))
-	print(is_palindrome("OpenAI"))
+	print(is_palindrome("PaintingHi"))
 
 	print(is_palindrome("12321"))
 	print(is_palindrome("12345"))
