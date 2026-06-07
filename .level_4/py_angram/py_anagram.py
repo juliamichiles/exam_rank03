@@ -10,15 +10,15 @@ Test:
  - print(Anagram("Conversation","Voices rant on")) --> False
 """
 
-def Anagram(s: str, t: str) -> bool:
+def anagram(s: str, t: str) -> bool:
 	if len(s) != len(t):
 		return False
 	return sorted(s) == sorted(t)
 
 if __name__ == "__main__":
-	result1 = Anagram("racecar","carrace")
-	result2 = Anagram("racecar","carace")
-	result3 = Anagram("Conversation","Voices rant on")
+	result1 = anagram("racecar","carrace")
+	result2 = anagram("racecar","carace")
+	result3 = anagram("Conversation","Voices rant on")
 
 	print(result1)
 	print(result2)

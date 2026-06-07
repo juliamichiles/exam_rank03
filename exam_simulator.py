@@ -151,12 +151,11 @@ class ExamSession:
                 self.display_subject(current_lvl, ex_name)
                 
                 print("Options:")
-                print("  [1] Submit / Grade exercise")
-                print("  [2] Re-read subject")
-                print("  [3] Skip exercise (Next level)")
-                print("  [4] Forfeit / Exit Exam")
+                print("  [grademe] Submit / Grade exercise")
+                print("  [skip] Skip exercise (Next level)")
+                print("  [exit] Exit Exam")
                 
-                choice = input("\nWhat do you want to do? (1-4): ").strip()
+                choice = input("\nWhat do you want to do?: ").strip()
                 
                 if choice == '1':
                     if self.check_exercise(current_lvl, ex_name):
@@ -165,13 +164,11 @@ class ExamSession:
                         break
                     else:
                         print(f"\n❌ FAIL! Check your work in ./{RENDERING_DIR}/{ex_name}/\n")
-                elif choice == '2':
-                    continue
-                elif choice == '3':
+                elif choice == 'skip':
                     print(f"\n⏭️ Skipping Level {current_lvl}...")
                     self.current_level_index += 1
                     break
-                elif choice == '4':
+                elif choice == 'exit':
                     print("\n👋 Exiting exam simulator. Keep practicing!")
                     sys.exit(0)
                 else:

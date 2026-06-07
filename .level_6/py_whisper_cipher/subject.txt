@@ -1,5 +1,5 @@
 """
-Given a strig 's' and an integer 'n', shift each alphabetic character in the string by 'n' positions in the alphabet
+Given a string 's' and an integer 'n', shift each alphabetic character in the string by 'n' positions in the alphabet
 
 The function must:
 	-> Preserve case (lowercase and uppercase separately)
