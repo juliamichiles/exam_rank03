@@ -157,7 +157,7 @@ class ExamSession:
                 
                 choice = input("\nWhat do you want to do?: ").strip()
                 
-                if choice == '1':
+                if choice == 'grademe':
                     if self.check_exercise(current_lvl, ex_name):
                         print(f"\n🟩 SUCCESS! You passed Level {current_lvl}.\n")
                         self.current_level_index += 1

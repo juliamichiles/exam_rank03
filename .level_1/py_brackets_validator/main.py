@@ -10,7 +10,7 @@
 #    return len(stack) == 0
 
 def run_tests(user_module) -> None:
-    name = "py_brackets_validator" 
+    name = "bracket_validator" 
     func = getattr(user_module, name, None)
     if not func:
         print(f"Error: Function '{name}' not found.")
